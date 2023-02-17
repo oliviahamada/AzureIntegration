@@ -23,6 +23,9 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     
+    - name: Setup Node.js environment
+      uses: actions/setup-node@v3.6.0
+  
     - name: Run Npm Install for GitHub Action
       run: npm install
 
