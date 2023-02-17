@@ -30,9 +30,7 @@ jobs:
   
     - name: Run Npm Install for GitHub Action
       run: git config --global url."https://${{ secrets.PAT }}@github.com/".insteadOf ssh://git@github.com/
-      
-    - name: CI
-      run: npm ci
+
     - name: Install
       run: npm install
 
