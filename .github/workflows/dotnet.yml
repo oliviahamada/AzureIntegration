@@ -32,7 +32,9 @@ jobs:
       run: git config --global url."https://${{ secrets.PAT }}@github.com/".insteadOf ssh://git@github.com/
 
     - name: Build GitHub Action
-      run: npm run build
+      run: |
+          npm install
+          npm run build
     
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
