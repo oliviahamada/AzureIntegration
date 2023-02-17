@@ -7,6 +7,7 @@ name: .NET
 env:
   AZURE_WEBAPP_NAME: web-testes    # set this to your application's name
   AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
+  DOTNET_VERSION: '6.0.x'
 
 on:
   push:
@@ -21,10 +22,17 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    
+    - name: Run Npm Install for GitHub Action
+      run: npm install
+
+    - name: Build GitHub Action
+      run: npm run build
+    
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
       with:
-        dotnet-version: 6.0.x
+        dotnet-version: ${{ env.DOTNET_VERSION }}
     - name: Setup MSBuild
       uses: microsoft/setup-msbuild@v1.3.1
     
