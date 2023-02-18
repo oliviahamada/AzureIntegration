@@ -33,7 +33,6 @@ jobs:
 
     - name: Build GitHub Action
       run: |
-          npm init
           npm run build --if-present
           npm test
     
