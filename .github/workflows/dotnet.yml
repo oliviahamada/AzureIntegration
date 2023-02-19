@@ -27,9 +27,6 @@ jobs:
           
     - name: Setup Node.js environment
       uses: actions/setup-node@v3.6.0
-  
-    - name: Run Npm Install for GitHub Action
-      run: git config --global url."https://${{ secrets.PATH_TOKEN }}@github.com/".insteadOf ssh://git@github.com/
 
     - name: Build GitHub Action
       run: |
