@@ -2,16 +2,22 @@
   "name": "backoffice",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm install",
-    "preinstall": "npm install -g bower --force"
+    "preinstall": "npm install -g bower --force",
+    "postinstall": "npm install gulp --save-prod"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "bootstrap": "5.2.3",
     "bower": "^1.8.14",
+    "gulp": "^4.0.2",
     "jquery": "~3.6.3"
-  }
+  },
+  "keywords": [
+    "gulp"
+  ]
 }
