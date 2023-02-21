@@ -5,12 +5,15 @@
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npm install",
+    "start": "npm install && gulp",
     "preinstall": "npm install -g bower --force",
     "postinstall": "npm install gulp --save-prod",
-    "gulp": "gulp",
+    "gulp": "npm run gulp",
     "gulp-watch": "gulp watch"
   },
+  "files": [
+    "WebApplication4"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
