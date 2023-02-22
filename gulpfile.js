@@ -10,7 +10,6 @@ var paths = {
         scripts: 'server/js/**/*.js'
     },
     destination: 'WebApplication4/wwwroot/libs'
-
 };
 
 // Styles Task
