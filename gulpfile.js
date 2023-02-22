@@ -29,11 +29,5 @@ gulp.task('scripts', function () {
 });
 
 
-// Watch Task
-gulp.task('watch', function () {
-    gulp.watch(paths.client.css, gulp.series('styles'));
-    gulp.watch(paths.client.script, gulp.series('scripts'));
-});
-
 // Default Task
-gulp.task('default', gulp.parallel('styles', 'scripts', 'watch'));
+gulp.task('default', gulp.parallel('styles', 'scripts'));
