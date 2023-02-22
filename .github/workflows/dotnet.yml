@@ -35,7 +35,7 @@ jobs:
       run: |
           npm run build --if-present
           npm install
-          npm install gulp --force
+          gulp
     
     - name: Setup .NET
       uses: actions/setup-dotnet@v3
